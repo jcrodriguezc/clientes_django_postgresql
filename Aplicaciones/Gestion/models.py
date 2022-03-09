@@ -18,7 +18,7 @@ class Persona(models.Model):
         return txt.format(self.primerApellido, self.segundoApellido, self.nombres)
 
 class Telefono(models.Model):
-    persona = models.ForeignKey(Persona null=False, blank=False, on_delete=models.CASCADE)
+    persona = models.ForeignKey(Persona, null=False, blank=False, on_delete=models.CASCADE)
     numero = models.CharField(max_length=10)
 
 class Email(models.Model):
